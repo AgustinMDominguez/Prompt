@@ -3,6 +3,8 @@
 # Proyect
 venv/**
 .vscode/
+input.txt
+output.txt
 
 # Python
 __pycache__/
