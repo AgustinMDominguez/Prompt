@@ -2,6 +2,7 @@
 
 # Proyect
 venv/**
+.vscode/
 
 # Python
 __pycache__/
