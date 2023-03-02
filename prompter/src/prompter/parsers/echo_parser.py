@@ -1,8 +1,8 @@
 from argparse import ArgumentParser, Namespace
 
-from src.cmd.parsers.command_parser import CommandParser
-from src.cmd.executors.echo_executor import EchoExecutor
-from src.cmd.command_line_input_fetcher import CommandLineInputFetcher
+from src.prompter.parsers.command_parser import CommandParser
+from src.prompter.executors.echo_executor import EchoExecutor
+from src.prompter.command_line_input_fetcher import CommandLineInputFetcher
 
 
 class EchoParser(CommandParser):

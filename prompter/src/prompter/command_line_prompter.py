@@ -1,11 +1,11 @@
 import argparse
 from argparse import Namespace
-from src.cmd.prompter import Prompter
-from src.cmd.input import PromptInput, InputFetcher
-from src.cmd.output import PromptOutput, OutputWriter
-from src.cmd.prompt_executor import PromptExecutor
-from src.cmd.parsers.echo_parser import EchoParser
-from src.cmd.command_line_input_fetcher import CommandLineInputFetcher
+from src.prompter.prompter import Prompter
+from src.prompter.input import PromptInput, InputFetcher
+from src.prompter.output import PromptOutput, OutputWriter
+from src.prompter.prompt_executor import PromptExecutor
+from src.prompter.parsers.echo_parser import EchoParser
+from src.prompter.command_line_input_fetcher import CommandLineInputFetcher
 
 
 class PromptArgs:

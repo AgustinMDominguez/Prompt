@@ -1,5 +1,5 @@
-from src.cmd.input import PromptInput
-from src.cmd.output import PromptOutput
+from src.prompter.input import PromptInput
+from src.prompter.output import PromptOutput
 
 class PromptExecutor:
     def execute(input: PromptInput) -> PromptOutput:

@@ -1,6 +1,6 @@
-from src.cmd.input import InputFetcher
-from src.cmd.output import OutputWriter
-from src.cmd.prompt_executor import PromptExecutor
+from src.prompter.input import InputFetcher
+from src.prompter.output import OutputWriter
+from src.prompter.prompt_executor import PromptExecutor
 
 class Prompter:
     def __init__(

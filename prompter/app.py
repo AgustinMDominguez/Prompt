@@ -3,7 +3,7 @@ import os
 import openai
 
 # local imports
-from src.cmd.command_line_prompter import CommandLinePrompter
+from src.prompter.command_line_prompter import CommandLinePrompter
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 

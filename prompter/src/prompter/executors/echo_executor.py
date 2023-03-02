@@ -1,6 +1,6 @@
-from src.cmd.prompt_executor import PromptExecutor
-from src.cmd.input import PromptInput
-from src.cmd.output import PromptOutput
+from src.prompter.prompt_executor import PromptExecutor
+from src.prompter.input import PromptInput
+from src.prompter.output import PromptOutput
 from src.ai.echo import echo
 
 class EchoExecutor(PromptExecutor):
