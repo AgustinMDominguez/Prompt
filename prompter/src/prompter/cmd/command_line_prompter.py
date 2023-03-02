@@ -5,7 +5,7 @@ from src.prompter.input import PromptInput, InputFetcher
 from src.prompter.output import PromptOutput, OutputWriter
 from src.prompter.prompt_executor import PromptExecutor
 from src.prompter.parsers.echo_parser import EchoParser
-from src.prompter.command_line_input_fetcher import CommandLineInputFetcher
+from prompter.src.prompter.cmd.command_line_input_fetcher import CommandLineInputFetcher
 
 
 class PromptArgs:

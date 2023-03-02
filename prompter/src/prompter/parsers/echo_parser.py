@@ -2,7 +2,7 @@ from argparse import ArgumentParser, Namespace
 
 from src.prompter.parsers.command_parser import CommandParser
 from src.prompter.executors.echo_executor import EchoExecutor
-from src.prompter.command_line_input_fetcher import CommandLineInputFetcher
+from prompter.src.prompter.cmd.command_line_input_fetcher import CommandLineInputFetcher
 
 
 class EchoParser(CommandParser):
