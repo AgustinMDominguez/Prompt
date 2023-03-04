@@ -12,5 +12,15 @@ class CommandLineInputFetcher(InputFetcher):
             "Method extract_arguments of base class ArgumentExtractor Not Implemented"
         )
 
+    def extract_default_input(self, parse_result: Namespace):
+        if parse_result.prompt is not None:
+            self.args.append(parse_result.prompt)
+        else:
+            if parse_result.input is not None:
+                with open(parse_result.input, 'r') as f:
+                    lines = f.readlines()
+                    prompt = "\n".join(lines)
+                    self.args.append(prompt)
+
     def get_input(self) -> PromptInput:
         return PromptInput(self.args, self.kwargs)

@@ -1,39 +1,13 @@
 import argparse
-from argparse import Namespace
 from src.prompter.prompter import Prompter
-from src.prompter.input import PromptInput, InputFetcher
-from src.prompter.output import PromptOutput, OutputWriter
+from src.prompter.input import InputFetcher
+from src.prompter.output import OutputWriter
 from src.prompter.prompt_executor import PromptExecutor
+from src.prompter.cmd.command_line_input_fetcher import CommandLineInputFetcher
+from src.prompter.cmd.command_line_output_writer import CommandLineOutputWriter
+
 from src.prompter.parsers.echo_parser import EchoParser
-from prompter.src.prompter.cmd.command_line_input_fetcher import CommandLineInputFetcher
-
-
-class PromptArgs:
-    def __init__(self, args: list = [], kwargs: dict = {}) -> None:
-        self.args: list = args
-        self.kwargs: dict = kwargs
-
-
-class CommandLineOutputWriter(OutputWriter):
-
-    def __init__(self) -> None:
-        self.output_filename = None
-        super().__init__()
-
-    def write_output(self, output: PromptOutput):
-        if output.result is not None:
-            self._write(output.result)
-        else:
-            self._write("<|endoftext|>")
-        if output.tokens_used is not None:
-            self._write(f"Total tokens used: {output.tokens_used}")
-
-    def _write(self, string: str):
-        if self.output_filename is not None:
-            with open(self.output_filename, 'w') as f:
-                f.write(string + "\n")
-        else:
-            print(string)
+from src.prompter.parsers.ask_parser import AskParser
 
 
 class CommandLinePrompter(Prompter):
@@ -41,7 +15,8 @@ class CommandLinePrompter(Prompter):
         self.argument_parser = argparse.ArgumentParser()
         self.subparsers = self.argument_parser.add_subparsers()
         command_parsers = [
-            EchoParser()
+            EchoParser(),
+            AskParser()
         ]
 
         for parser in command_parsers:

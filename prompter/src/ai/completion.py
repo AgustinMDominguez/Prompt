@@ -1,22 +1,21 @@
 import openai
 
-from modules.models import ModelFinder
-from modules.CommandParser import CommandParser
+from src.models import ModelFinder
+from src.ai.config import COMPLETION_DEFAULT_TEMPERATURE, COMPLETION_DEFAULT_MAX_TOKENS
 
 
-def get_command_parser() -> CommandParser:
-    completion_command_parser = CommandParser("ask")
-    completion_command_parser.executor = complete_prompt
-    return completion_command_parser
-
-
-def complete_prompt(input: str) -> str:
+def complete_prompt(
+    input: str,
+    temperature: float = COMPLETION_DEFAULT_TEMPERATURE,
+    max_tokens: int = COMPLETION_DEFAULT_MAX_TOKENS,
+    echo_prompt: bool = True
+) -> str:
     response = openai.Completion.create(
         model=ModelFinder.get_strongest().as_str,
         prompt=input,
-        temperature=0.2,
-        max_tokens=200,
-        echo=True
+        temperature=temperature,
+        max_tokens=max_tokens,
+        echo=echo_prompt
     )
-    print(f"Token used in total: {response.usage.total_tokens}")
+    print(f"Temperature: {temperature}\tmax_tokens: {max_tokens}")
     return response.choices[0].text
