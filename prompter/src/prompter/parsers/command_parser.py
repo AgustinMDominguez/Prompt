@@ -1,4 +1,9 @@
-from argparse import ArgumentParser, Namespace
+from argparse import ArgumentParser
+
+from src.prompter.cmd.command_line_help import (
+    DEFAULT_INPUT_ARGUMENT_HELP,
+    DEFAULT_OUTPUT_ARGUMENT_HELP
+)
 
 class CommandParser:
 
@@ -11,7 +16,7 @@ class CommandParser:
         )
 
     def add_default_input_argument(self, parser: ArgumentParser):
-        parser.add_argument("--output", "-o", default=None)
+        parser.add_argument("--output", "-o", default=None, help=DEFAULT_OUTPUT_ARGUMENT_HELP)
 
     def add_default_output_argument(self, parser: ArgumentParser):
-        parser.add_argument("--input", "-i", default=None)
+        parser.add_argument("--input", "-i", default=None, help=DEFAULT_INPUT_ARGUMENT_HELP)

@@ -19,7 +19,7 @@ class CommandLineInputFetcher(InputFetcher):
             if parse_result.input is not None:
                 with open(parse_result.input, 'r') as f:
                     lines = f.readlines()
-                    prompt = "\n".join(lines)
+                    prompt = "".join(lines)
                     self.args.append(prompt)
 
     def get_input(self) -> PromptInput:
