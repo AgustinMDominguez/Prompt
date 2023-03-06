@@ -32,8 +32,8 @@ class EditInputFetcher(CommandLineInputFetcher):
     def extract_arguments(self, parse_result: Namespace) -> None:
         self.extract_source(parse_result)
         self.args.append(parse_result.instruction)
-        if parse_result.temp is not None:
-            self.kwargs["temperature"] = parse_result.temp
+        if parse_result.temperature is not None:
+            self.kwargs["temperature"] = parse_result.temperature
 
     def extract_source(self, parse_result):
         if parse_result.source is not None:

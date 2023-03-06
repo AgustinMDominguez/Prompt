@@ -31,7 +31,7 @@ class CodeParser(CommandParser):
 class CodeInputFetcher(CommandLineInputFetcher):
     def extract_arguments(self, parse_result: Namespace) -> None:
         self.extract_default_input(parse_result)
-        if parse_result.temp is not None:
-            self.kwargs["temperature"] = parse_result.temp
+        if parse_result.temperature is not None:
+            self.kwargs["temperature"] = parse_result.temperature
         if parse_result.maxtokens:
             self.kwargs["max_tokens"] = parse_result.maxtokens

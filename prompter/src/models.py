@@ -14,6 +14,11 @@ class Ada(Model):
         return "ada"
 
 
+class ChatTurbo(Model):
+    def __str__(self) -> str:
+        return "gpt-3.5-turbo"
+
+
 class Davinci(Model):
     def __str__(self) -> str:
         return "text-davinci-003"
@@ -34,6 +39,11 @@ class ModelFinder:
     _cheapest = Ada()
     _code = CodeDavinci()
     _edit = EditDavinci()
+    _chat = ChatTurbo()
+
+    @classmethod
+    def get_chat_model(cls):
+        return cls._chat
 
     @classmethod
     def get_strongest(cls):
