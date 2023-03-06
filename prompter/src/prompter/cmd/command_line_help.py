@@ -1,7 +1,12 @@
 
 BASE_COMMAND_HELP = "BASE_COMMAND_HELP"
+ECHO_COMMAND_HELP = "test command that just repeats the input prompt "
 ASK_COMMAND_HELP = """basic commands for the strongest model for prompt completion.
 Can do questions and natural language commands. ai ask -h for command information"""
+EDIT_COMMAND_HELP = "TODO!! EDIT_COMMAND_HELP"
+CODE_COMMAND_HELP = "completion commands like 'ask' but tuned specifically for code completion"
+
+# Flags
 
 TEMPERATURE_FLAG_HELP = """temperature affects the randomness of the output.
 A lower temperature will result in more predictable output,
@@ -13,3 +18,5 @@ Tokens are pieces of words.
 
 DEFAULT_INPUT_ARGUMENT_HELP = "file path from where the input should be read"
 DEFAULT_OUTPUT_ARGUMENT_HELP = "file path from where the result will be written"
+
+INSTRUCTION_FLAG_HELP = "TODO! INSTRUCTIONS_FLAG_HELP"

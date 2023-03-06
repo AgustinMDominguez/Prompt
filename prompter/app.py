@@ -1,8 +1,5 @@
-# library imports
 import os
 import openai
-
-# local imports
 from src.prompter.cmd.command_line_prompter import CommandLinePrompter
 
 

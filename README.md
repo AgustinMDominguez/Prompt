@@ -21,3 +21,10 @@ Para probar la API en caliente sin tener que corre constantemente los mismos ped
 | Code refactoring | 0.2 |
 
 `pycodestyle . --exclude=venv/*,**ignore* --max-line-length=100`
+
+# TODO
+
+* Create DEVELOP.md for developing tips and move the pycodestyle instruction
+* Create command for spell checking and maybe writing improvement using the edit endpoint
+* Sort the unsorted examples
+* Add further explanation on how to create the "ai" console command

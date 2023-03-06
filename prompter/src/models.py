@@ -19,14 +19,34 @@ class Davinci(Model):
         return "text-davinci-003"
 
 
+class CodeDavinci(Model):
+    def __str__(self) -> str:
+        return "code-davinci-002"
+
+
+class EditDavinci(Model):
+    def __str__(self) -> str:
+        return "text-davinci-edit-001"
+
+
 class ModelFinder:
     _strongest = Davinci()
     _cheapest = Ada()
+    _code = CodeDavinci()
+    _edit = EditDavinci()
 
     @classmethod
     def get_strongest(cls):
         return cls._strongest
 
     @classmethod
+    def get_edit_model(cls):
+        return cls._edit
+
+    @classmethod
     def get_cheapest(cls):
         return cls._cheapest
+
+    @classmethod
+    def get_best_for_code(cls):
+        return cls._code
