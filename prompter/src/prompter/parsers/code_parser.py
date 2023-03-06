@@ -20,7 +20,7 @@ class CodeParser(CommandParser):
         self.add_default_input_argument(code_parser)
         self.add_default_output_argument(code_parser)
         code_parser.add_argument("prompt", nargs='?')
-        code_parser.add_argument("--temp", "-t", type=float, help=TEMPERATURE_FLAG_HELP)
+        code_parser.add_argument("--temperature", "-t", type=float, help=TEMPERATURE_FLAG_HELP)
         code_parser.add_argument("--maxtokens", "-k", type=int, help=MAX_TOKENS_FLAG_HELP)
         code_parser.set_defaults(
             executor=CodeExecutor(),

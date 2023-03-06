@@ -21,7 +21,7 @@ class EditParser(CommandParser):
         self.add_default_output_argument(edit_parser)
         edit_parser.add_argument("source", nargs='?')
         edit_parser.add_argument("instruction", help=INSTRUCTION_FLAG_HELP)
-        edit_parser.add_argument("--temp", "-t", type=float, help=TEMPERATURE_FLAG_HELP)
+        edit_parser.add_argument("--temperature", "-t", type=float, help=TEMPERATURE_FLAG_HELP)
         edit_parser.set_defaults(
             executor=EditExecutor(),
             input_fetcher=EditInputFetcher()

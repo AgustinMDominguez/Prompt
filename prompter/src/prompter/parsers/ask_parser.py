@@ -19,8 +19,8 @@ class AskParser(CommandParser):
         ask_parser: ArgumentParser = subparsers.add_parser(self.command_name, help=ASK_COMMAND_HELP)
         self.add_default_input_argument(ask_parser)
         self.add_default_output_argument(ask_parser)
-        ask_parser.add_argument("prompt", nargs='?', default=None)
-        ask_parser.add_argument("--temp", "-t", type=float, help=TEMPERATURE_FLAG_HELP)
+        ask_parser.add_argument("prompt", nargs='?')
+        ask_parser.add_argument("--temperature", "-t", type=float, help=TEMPERATURE_FLAG_HELP)
         ask_parser.add_argument("--maxtokens", "-k", type=int, help=MAX_TOKENS_FLAG_HELP)
         ask_parser.set_defaults(
             executor=AskExecutor(),

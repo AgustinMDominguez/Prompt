@@ -28,3 +28,5 @@ Para probar la API en caliente sin tener que corre constantemente los mismos ped
 * Create command for spell checking and maybe writing improvement using the edit endpoint
 * Sort the unsorted examples
 * Add further explanation on how to create the "ai" console command
+* Add echo command help
+* Add the missing help strings
