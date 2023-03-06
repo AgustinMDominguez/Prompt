@@ -1,6 +1,7 @@
 from argparse import Namespace
 from src.prompter.input import InputFetcher, PromptInput
 
+
 class CommandLineInputFetcher(InputFetcher):
     def __init__(self, args: list = [], kwargs: dict = {}) -> None:
         self.args: list = args

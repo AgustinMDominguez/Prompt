@@ -2,6 +2,7 @@ from src.prompter.input import InputFetcher
 from src.prompter.output import OutputWriter
 from src.prompter.prompt_executor import PromptExecutor
 
+
 class Prompter:
     def __init__(
         self,

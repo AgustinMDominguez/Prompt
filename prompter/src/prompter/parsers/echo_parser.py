@@ -16,8 +16,8 @@ class EchoParser(CommandParser):
         self.add_default_output_argument(echo_parser)
         echo_parser.add_argument("prompt", nargs='?')
         echo_parser.set_defaults(
-            executor = EchoExecutor(),
-            input_fetcher = EchoInputFetcher()
+            executor=EchoExecutor(),
+            input_fetcher=EchoInputFetcher()
         )
 
 

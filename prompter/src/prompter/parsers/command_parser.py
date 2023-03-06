@@ -5,6 +5,7 @@ from src.prompter.cmd.command_line_help import (
     DEFAULT_OUTPUT_ARGUMENT_HELP
 )
 
+
 class CommandParser:
 
     def __init__(self, command_name: str) -> None:

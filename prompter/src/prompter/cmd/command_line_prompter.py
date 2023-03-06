@@ -27,9 +27,9 @@ class CommandLinePrompter(Prompter):
             parser.add_command_subparser(self.subparsers)
 
         super().__init__(
-            input_fetcher = InputFetcher(),
-            output_writer = OutputWriter(),
-            prompt_executor = PromptExecutor()
+            input_fetcher=InputFetcher(),
+            output_writer=OutputWriter(),
+            prompt_executor=PromptExecutor()
         )
 
     def execute_prompt(self):
