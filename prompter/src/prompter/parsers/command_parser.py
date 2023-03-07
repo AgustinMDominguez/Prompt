@@ -17,7 +17,7 @@ class CommandParser:
         )
 
     def add_default_input_argument(self, parser: ArgumentParser):
-        parser.add_argument("--output", "-o", default=None, help=DEFAULT_OUTPUT_ARGUMENT_HELP)
+        parser.add_argument("--input", "-i", default=None, help=DEFAULT_INPUT_ARGUMENT_HELP)
 
     def add_default_output_argument(self, parser: ArgumentParser):
-        parser.add_argument("--input", "-i", default=None, help=DEFAULT_INPUT_ARGUMENT_HELP)
+        parser.add_argument("--output", "-o", default=None, help=DEFAULT_OUTPUT_ARGUMENT_HELP)

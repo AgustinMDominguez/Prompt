@@ -7,10 +7,10 @@ from src.prompter.parsers.ask_parser import AskParser
 from src.prompter.parsers.echo_parser import EchoParser
 from src.prompter.parsers.code_parser import CodeParser
 from src.prompter.parsers.edit_parser import EditParser
+from src.prompter.parsers.chat_parser import ChatParser
 from src.prompter.cmd.command_line_help import BASE_COMMAND_HELP
 from src.prompter.cmd.command_line_input_fetcher import CommandLineInputFetcher
 from src.prompter.cmd.command_line_output_writer import CommandLineOutputWriter
-
 
 
 class CommandLinePrompter(Prompter):
@@ -23,7 +23,8 @@ class CommandLinePrompter(Prompter):
             EchoParser(),
             AskParser(),
             CodeParser(),
-            EditParser()
+            EditParser(),
+            ChatParser()
         ]
 
         for parser in command_parsers:

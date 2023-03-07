@@ -16,7 +16,10 @@ class EditParser(CommandParser):
         super().__init__("edit")
 
     def add_command_subparser(self, subparsers):
-        edit_parser: ArgumentParser = subparsers.add_parser(self.command_name, help=EDIT_COMMAND_HELP)
+        edit_parser: ArgumentParser = subparsers.add_parser(
+            self.command_name,
+            help=EDIT_COMMAND_HELP
+        )
         self.add_default_input_argument(edit_parser)
         self.add_default_output_argument(edit_parser)
         edit_parser.add_argument("source", nargs='?')

@@ -3,11 +3,13 @@ from src.ai.conversation.message import ChatHistory, UserMessage, SystemMessage
 from src.ai.conversation.chat import iterate_chat
 from src.ai.config import CHAT_DEFAULT_TEMPERATURE
 
+
 class ChatManager:
     def __init__(
         self, assistant: Assistant,
         temperature: float = CHAT_DEFAULT_TEMPERATURE
     ) -> None:
+        self.token_used = 0
         self.close_message = "close"
         self.temperature = temperature
         self.assistant = assistant
@@ -15,7 +17,7 @@ class ChatManager:
         self.history = ChatHistory([init_msg])
 
     def run(self):
-        first_message = SystemMessage("Start with a 1 short sentence introduction with your name")
+        first_message = SystemMessage("Start with your name and ask what can you help with")
         self.history.messages.append(first_message)
         self.fetch_response()
         self.print_last_message()
@@ -34,3 +36,6 @@ class ChatManager:
     def fetch_response(self):
         response = iterate_chat(self.history, self.temperature)
         self.history.messages.append(response)
+
+    def get_total_use(self) -> int:
+        return self.token_used

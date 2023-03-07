@@ -10,18 +10,21 @@ class ChatMessage:
 
 class UserMessage(ChatMessage):
     _role = "user"
+
     def __init__(self, content: str) -> None:
         super().__init__(self._role, content)
 
 
 class SystemMessage(ChatMessage):
     _role = "system"
+
     def __init__(self, content: str) -> None:
         super().__init__(self._role, content)
 
 
 class AssistantMessage(ChatMessage):
     _role = "assistant"
+
     def __init__(self, content: str) -> None:
         super().__init__(self._role, content)
 

@@ -16,7 +16,10 @@ class CodeParser(CommandParser):
         super().__init__("code")
 
     def add_command_subparser(self, subparsers):
-        code_parser: ArgumentParser = subparsers.add_parser(self.command_name, help=CODE_COMMAND_HELP)
+        code_parser: ArgumentParser = subparsers.add_parser(
+            self.command_name,
+            help=CODE_COMMAND_HELP
+        )
         self.add_default_input_argument(code_parser)
         self.add_default_output_argument(code_parser)
         code_parser.add_argument("prompt", nargs='?')
