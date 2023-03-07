@@ -8,7 +8,6 @@ from src.prompter.parsers.echo_parser import EchoParser
 from src.prompter.parsers.code_parser import CodeParser
 from src.prompter.parsers.edit_parser import EditParser
 from src.prompter.parsers.chat_parser import ChatParser
-from src.prompter.cmd.command_line_help import BASE_COMMAND_HELP
 from src.prompter.cmd.command_line_input_fetcher import CommandLineInputFetcher
 from src.prompter.cmd.command_line_output_writer import CommandLineOutputWriter
 
@@ -16,7 +15,7 @@ from src.prompter.cmd.command_line_output_writer import CommandLineOutputWriter
 class CommandLinePrompter(Prompter):
     def __init__(self) -> None:
         self.cmd_parser = argparse.ArgumentParser()
-        self.cmd_parser.add_argument("command", help=BASE_COMMAND_HELP)
+        self.cmd_parser.add_argument("command")
         self.argument_parser = argparse.ArgumentParser()
         self.subparsers = self.argument_parser.add_subparsers()
         command_parsers = [

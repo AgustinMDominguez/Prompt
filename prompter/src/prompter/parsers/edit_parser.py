@@ -6,7 +6,8 @@ from src.prompter.cmd.command_line_input_fetcher import CommandLineInputFetcher
 from src.prompter.cmd.command_line_help import (
     EDIT_COMMAND_HELP,
     TEMPERATURE_FLAG_HELP,
-    INSTRUCTION_FLAG_HELP
+    INSTRUCTION_FLAG_HELP,
+    SOURCE_ARGUMENT_HELP
 )
 
 
@@ -22,7 +23,7 @@ class EditParser(CommandParser):
         )
         self.add_default_input_argument(edit_parser)
         self.add_default_output_argument(edit_parser)
-        edit_parser.add_argument("source", nargs='?')
+        edit_parser.add_argument("source", nargs='?', help=SOURCE_ARGUMENT_HELP)
         edit_parser.add_argument("instruction", help=INSTRUCTION_FLAG_HELP)
         edit_parser.add_argument("--temperature", "-t", type=float, help=TEMPERATURE_FLAG_HELP)
         edit_parser.set_defaults(

@@ -1,10 +1,13 @@
 
-BASE_COMMAND_HELP = "BASE_COMMAND_HELP"
-ECHO_COMMAND_HELP = "test command that just repeats the input prompt "
+ECHO_COMMAND_HELP = """test command that just repeats the input prompt.
+ 'ai echo -h' for more details"""
 ASK_COMMAND_HELP = """basic commands for the strongest model for prompt completion.
-Can do questions and natural language commands. ai ask -h for command information"""
+Can do questions and natural language commands. 'ai ask -h' for more details"""
 EDIT_COMMAND_HELP = "TODO!! EDIT_COMMAND_HELP"
-CODE_COMMAND_HELP = "completion commands like 'ask' but tuned specifically for code completion"
+CODE_COMMAND_HELP = """performs completion commands like 'ask' but tuned
+specifically for code completion. ai code -h' for more details"""
+CHAT_COMMAND_HELP = """starts a chat with one of the available assistants that
+ will try to help the user. ai chat -h' for more details"""
 
 # Flags
 
@@ -19,7 +22,9 @@ Tokens are pieces of words.
 DEFAULT_INPUT_ARGUMENT_HELP = "file path from where the input should be read"
 DEFAULT_OUTPUT_ARGUMENT_HELP = "file path from where the result will be written"
 
-INSTRUCTION_FLAG_HELP = "TODO! INSTRUCTIONS_FLAG_HELP"
+INSTRUCTION_FLAG_HELP = "instruction to what will be done to the source text"
+SOURCE_ARGUMENT_HELP = "the text that will be edited. It can be replaced with the -i flag"
 
-CHAT_COMMAND_HELP = "TODO! CHAT_COMMAND_HELP"
-ASSISTANT_ARGUMENT_HELP = "TODO! ASSISTANT_ARGUMENT_HELP"
+ASSISTANT_ARGUMENT_HELP = """
+ Blake: General assistant with the most knowledge.
+ Stace: More concise assistant that doesn't know code or other languages."""
