@@ -3,6 +3,7 @@
   - [Instalar los requisitos](#instalar-los-requisitos)
   - [Activar la API-KEY](#activar-la-api-key)
 - [Iniciar el entorno](#iniciar-el-entorno)
+- [El comando `ai`](#el-comando-ai)
 
 
 # Setup inicial
@@ -27,7 +28,9 @@
 
 ## Activar la API-KEY
 
-1. **Abrir con un editor el archivo *.bashrc* de la home**
+1. **Abrir con un editor el archivo *.bashrc* de la home del usuario**
+
+(Para ver la home del usuario se puede correr `cd` en cualquier consola)
 
 En algun lugar del archivo, exportar la api key:
 
@@ -43,3 +46,33 @@ En algun lugar del archivo, exportar la api key:
 2. **Activar el entorno del proyecto**
 
 `source venv/bin/activate`
+
+Ahora se puede correr directamente cualquier archivo .py del proyecto.
+
+El archivo ejecutable principal del proyecto se encuentra en `/prompter/app.py`
+
+# El comando `ai`
+
+Para poder usar este repo desde cualquier consola se puede hacer este paso *opcional* para agregar un alias al script principal.
+
+Suponiendo que se hizo el entorno virtual en la base del repositorio con el nombre `venv` como se especifica en el setup inicial, se debe abrer el archivo `.bashrc` de la home del usuario
+
+para abrirla se puede hacer
+
+```bash
+cd
+nano .bashrc
+```
+
+o reemplazando `nano` por cualquier editor de texto.
+
+Luego al final del archivo agregar las siguientes lineas:
+
+```shell
+export PROMPTER_HOME_DIR=/home/amd/Proyects/Prompter
+alias ai="$PROMPTER_HOME_DIR/venv/bin/python $PROMPTER_HOME_DIR/prompter/app.py"
+```
+
+reemplazando lo que está a la derecha de `PROMPTER_HOME_DIR=` por el path a donde fue clonado el repositorio.
+
+Luego para comprobar que funcionó, abrir una consola nueva y tipear `ai echo test` y deberia repetir el mensaje "test"

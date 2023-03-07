@@ -1,6 +1,6 @@
 import openai
 from src.models import ModelFinder
-from src.ai.config import EDIT_DEFAULT_TEMPERATURE, EDIT_DEFAULT_MAX_TOKENS
+from src.ai.config import EDIT_DEFAULT_TEMPERATURE
 
 
 class EditPromptResult:

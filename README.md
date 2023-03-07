@@ -1,32 +1,43 @@
 This is a personal space for testing and developing Proofs of Concept for Application of the Open AI API.
 
-Para probar la API en caliente sin tener que corre constantemente los mismos pedidos, mejor usar un notebook de Jupyter: Ver el archivo [`workshop.ipynb`](src/workshop.ipynb)
-
 # Links
 
-* [Commits Documentation](Docs/Commits.md)
-* [Instalación y setup](Docs/Setup.md)
+* Installation & Setup: [(Español)](Docs/Setup.md) | [(English)](Docs/Setup_EN.md)
+* [Development of new features](Docs/DEVELOP.md)
+* [Interesting examples of use of the models](Docs/Good_Examples.md)
+* [*Failed* examples of use of the models](Docs/Wrong_Examples.md)
 
-# Tips
+# Usage
 
-### Sugerencia de Temperatura
+After installation and setup, in any console you can type the `ai` command with a subcommand and its arguments.
+
+some of the available subcommands are: `ask, code, edit, chat`
+
+i.e:
+
+`ai ask "Write a list of 10 names for a medieval fantasy King -t 0.9"`
+
+For more detailed explanations of flags type
+
+`ai -h`
+
+or
+
+`ai <command> -h`
+
+## Temperature suggestions
 
 | Usecase | temperature |
 | --- | --- |
 | Chatbot | 0.5 |
-| Store writing | 0.8 |
+| Story writing | 0.8 |
 | Email parser | 0.3 |
 | Summarise test | 0.5 |
 | Code generation | 0.8 |
 | Code refactoring | 0.2 |
 
-`pycodestyle . --exclude=venv/*,**ignore* --max-line-length=100`
-
 # TODO
 
-* Create DEVELOP.md for developing tips and move the pycodestyle instruction
 * Create command for spell checking and maybe writing improvement using the edit endpoint
 * Sort the unsorted examples
-* Add further explanation on how to create the "ai" console command
-* Add echo command help
-* Add the missing help strings
+* Add more experimental assistants to the chat command
