@@ -27,4 +27,4 @@ SOURCE_ARGUMENT_HELP = "the text that will be edited. It can be replaced with th
 
 ASSISTANT_ARGUMENT_HELP = """
  Blake: General assistant with the most knowledge.
- Stace: More concise assistant that doesn't know code or other languages."""
+ Grace: More concise assistant that doesn't know code or other languages."""

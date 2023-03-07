@@ -1,4 +1,4 @@
-from src.ai.conversation.assistants import Assistant
+from src.ai.conversation.assistants.assistant import Assistant
 from src.ai.conversation.message import ChatHistory, UserMessage, SystemMessage
 from src.ai.conversation.chat import iterate_chat
 from src.ai.config import CHAT_DEFAULT_TEMPERATURE
