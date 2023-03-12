@@ -32,3 +32,10 @@ class AssistantMessage(ChatMessage):
 class ChatHistory:
     def __init__(self, messages: list[ChatMessage]) -> None:
         self.messages = messages
+
+    def __str__(self) -> str:
+        string = "<History>\n"
+        for msg in self.messages:
+            string = string + f"\t{msg.role} > {msg.content}\n"
+        string = string + "<History/>"
+        return string

@@ -9,6 +9,9 @@ class CompletePromptResult:
         self.result = result
         self.used_tokens = used_tokens
 
+    def __str__(self) -> str:
+        return f"OsResponse(result={self.result}, tokens_used:{self.used_tokens})"
+
 
 def complete_prompt(
     input: str,

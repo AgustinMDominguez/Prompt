@@ -8,6 +8,7 @@ from src.prompter.parsers.echo_parser import EchoParser
 from src.prompter.parsers.code_parser import CodeParser
 from src.prompter.parsers.edit_parser import EditParser
 from src.prompter.parsers.chat_parser import ChatParser
+from src.prompter.parsers.os_parser import OsParser
 from src.prompter.cmd.command_line_input_fetcher import CommandLineInputFetcher
 from src.prompter.cmd.command_line_output_writer import CommandLineOutputWriter
 
@@ -23,7 +24,8 @@ class CommandLinePrompter(Prompter):
             AskParser(),
             CodeParser(),
             EditParser(),
-            ChatParser()
+            ChatParser(),
+            OsParser()
         ]
 
         for parser in command_parsers:

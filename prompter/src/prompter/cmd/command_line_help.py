@@ -8,6 +8,8 @@ CODE_COMMAND_HELP = """performs completion commands like 'ask' but tuned
 specifically for code completion. ai code -h' for more details"""
 CHAT_COMMAND_HELP = """starts a chat with one of the available assistants that
  will try to help the user. ai chat -h' for more details"""
+OS_COMMAND_HELP = """Runs a background ai generated script to perform a simple ask.
+ ai chat -h' for more details"""
 
 # Flags
 
